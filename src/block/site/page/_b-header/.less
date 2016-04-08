@@ -29,6 +29,26 @@
 						&:before {
 							content:none;
 						}
+						
+						@media @media-size-xs {
+							& {
+								#fe.w(12em);
+								#fe.bsize(contain);
+								margin-left:1em;
+							}
+						}
+					}
+				}
+				
+				&.xs-menu {
+					a {
+						margin-right:1em;
+						#fe.w(42px);
+						#fe.h(42px);
+						#fe.brep();
+						#fe.bpos();
+						#fe.bsize(80%);
+						#site.bi('page/header-menu-icon.svg');
 					}
 				}
 				
