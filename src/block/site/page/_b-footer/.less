@@ -1,3 +1,133 @@
 .b-footer {
 	#fe.bg(#cc3300);
+	
+	.footer-container {
+		
+		display:table;
+		#fe.w(100%);
+		
+		.footer-row {
+			display:table-row;
+			
+			.footer-cell {
+				display:table-cell;
+				vertical-align:middle;
+				padding:3em 0;
+				text-align:right;
+				
+				@media @media-size-xs {
+					& {
+						display:block;
+						text-align:left;
+						padding:1em 0 1.5em;
+						padding-left:7em;
+					}
+				}
+				
+				&.logo {
+					text-align:left;
+					
+					a {
+						display:inline-block;
+						margin-left:0em;
+						#fe.w(23.5em);
+						#fe.h(5em);
+						#site.bi('page/logo-footer.png');
+						#fe.brep();
+						#fe.bpos(left center);
+						
+						&:before {
+							content:none;
+						}
+						
+						@media @media-size-xs {
+							& {
+								text-align:center;
+								#fe.w(100%);
+								#fe.bpos();
+							}
+						}
+						
+					}
+					
+					@media @media-size-xs {
+						& {
+							padding-left:0em;
+						}
+					}
+				}
+				
+				&.creator {
+					@media @media-size-xs {
+						& {
+							padding-left:0em;
+							padding-bottom:3em;
+						}
+					}
+				}
+				
+				a {
+					display:inline-block;
+					cursor:pointer;
+					position:relative;
+					margin-left:4em;
+					#fe.color(#ffffff);
+					#fe.size(1.6em);
+					#fe.ff(aspl);
+					#fe.lh(20px);
+					
+					&:before {
+						content:'';
+						position:absolute;
+						left:-30px;
+						top:0;
+						#fe.w(20px);
+						#fe.h(100%);
+						#fe.bpos();
+						#fe.brep();
+					}
+					
+					&.phone:before {
+						#site.bi('page/header-phone-icon.png');
+					}
+					&.email:before {
+						#site.bi('page/header-email-icon.png');
+					}
+					&.geo:before {
+						#site.bi('page/header-geo-icon.png');
+					}
+					&.dorohovdesign {
+						margin-left:3em;
+						#site.bi('page/dorohovdesign.png');
+						#fe.brep();
+						#fe.bpos();
+						#fe.w(155px);
+						#fe.h(25px);
+						
+						&:before {
+							content:none;
+						}
+						
+						@media @media-size-xs {
+							& {
+								margin-left:0em;
+								#fe.w(100%);
+							}
+						}
+						
+					}
+					
+					&:hover {
+						#fe.underline();
+					}
+					
+					@media @media-size-xs {
+						& {
+							margin-left:0em;
+						}
+					}
+				}
+			}
+		}
+	}
 }
