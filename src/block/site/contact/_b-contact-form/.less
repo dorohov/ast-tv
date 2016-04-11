@@ -1,3 +1,147 @@
 .b-contact-form {
+	#fe.bg(#fff9e9);
 	
+	.title {
+		#fe.ff(aspl);
+		#fe.size(4.8em);
+		#fe.color(#333333);
+		
+		@media @media-size-xs {
+			& {
+				margin:1em .33em 0em;
+			}
+		}
+	}
+	
+	.form {
+		
+		.input-cont {
+			position:relative;
+			z-index:1;
+			margin: 5em 6em 5em 0;
+			
+			@media @media-size-xs {
+				& {
+					margin:3em 2em;
+				}
+			}
+			
+			&:before {
+				content:'';
+				position:absolute;
+				right:0;
+				top:0;
+				#fe.h(100%);
+				#fe.w(94%);
+				#fe.bg(#ffffff);
+				z-index:0;
+			}
+			
+			&.with-textarea {
+				margin-right:0em;
+				
+				@media @media-size-xs {
+					& {
+						margin: 0em 2em 1.5em;
+					}
+				}
+				
+				&:before {
+					#fe.h(14em);
+				}
+			}
+			&.with-btn {
+				margin-top:0em;
+				
+				@media @media-size-xs {
+					& {
+						margin: 0em 2em 3em;
+					}
+				}
+				
+				&:before {
+					content:none;
+				}
+			}
+			
+			.label {
+				position:relative;
+				display:block;
+				padding:0.5em 0;
+				z-index:2;
+				#fe.color(#ffc031);
+				#fe.ff(aspl);
+				#fe.size(2em);
+			}
+			
+			input, textarea {
+				resize:none;
+				border:none;
+				outline:none;
+				position:absolute;
+				right:0;
+				top:0;
+				z-index:2;
+				#fe.h(100%);
+				#fe.w(75%);
+				#fe.color(#333333);
+				#fe.bg(#ffffff);
+				#fe.h(100%);
+				#fe.w(66.66666666%);
+			}
+			
+			textarea {
+				#fe.h(6.5em);
+				#fe.lh(1.2em);
+				padding:0.5em 0;
+				
+				@media @media-size-xs {
+					& {
+						position:relative;
+						#fe.w(94%);
+						margin-left:6%;
+						margin-top:0em;
+					}
+				}
+				
+				@media @media-size-sm {
+					& {
+						position:relative;
+						#fe.w(94%);
+						margin-left:6%;
+						margin-top:0em;
+						#fe.h(5.3em);
+					}
+				}
+			}
+			
+			.orange-btn {
+				.cleardefault();
+				cursor:pointer;
+				position:relative;
+				display:inline-block;
+				padding:1.2em 4em;
+				transition:all @trans-speed ease;
+				#fe.w(auto);
+				#fe.ff(pnr);
+				#fe.size(1.5em);
+				#fe.bg(#ffc031);
+				#fe.color(#ffffff);
+				#fe.uppercase();
+				
+				&:hover {
+					#fe.bg(#cc3300);
+				}
+				
+				@media @media-size-xs {
+					& {
+						display:block;
+						#fe.w(100%);
+					}
+				}
+			}
+			
+		}
+		
+	}
 }

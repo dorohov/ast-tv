@@ -9,10 +9,23 @@
 	#fe.bg(#ffb32a);
 	#fe.bsize(cover);
 	
+	@media @media-size-xs {
+		& {
+			margin-top:0em;
+		}
+	}
+	
 	.title {
 		padding:1.5em 0 1em;
 		#fe.color(#ffffff);
 		#fe.ff(pnl);
 		#fe.size(6em);
+		
+		@media @media-size-xs {
+			& {
+				#fe.size(3em);
+				padding:1em 0.5em;
+			}
+		}
 	}
 }
