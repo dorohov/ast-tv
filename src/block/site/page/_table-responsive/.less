@@ -1,0 +1,34 @@
+.table-responsive {
+	
+	overflow-x: auto;
+	min-height: 0.01%;
+	
+	@media @media-size-xs {
+		overflow-y: hidden;
+		padding:0 1em;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		#fe.w(100%);
+		
+		& > .table {
+			
+			& > thead, & > tbody, & > tfoot {
+				& > tr {
+					& > th, & > td {
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+		
+		& > .table-switcher, & > .cost-table.as-table {
+			margin-bottom: 0;
+			
+			.switcher-row, .as-row {
+				.switcher, .as-cell {
+					/*white-space: nowrap;*/
+				}
+			}
+		}
+	}
+	
+}

@@ -1,3 +1,260 @@
 .b-cost-body {
+	padding-top:4em;
+	
+	.banner-cont {
+		padding-right:3em;
+		
+		@media @media-size-xs {
+			padding:0 2em;
+		}
+		
+		@media @media-size-sm {
+			padding:0 2em;
+		}
+	}
+	
+	.flesh-color-bnr {
+		padding:3em 3em 2em;
+		#fe.bg(rgba(255, 215, 125, 0.15));
+		#fe.color(#333333);
+		#fe.ff(pnr);
+		
+		@media @media-size-sm {
+			display:inline-block;
+			vertical-align:top;
+			#fe.w(50%);
+		}
+		
+		.header {
+			padding-left:4em;
+			#fe.bpos(left center);
+			#fe.brep();
+			#fe.lh(3em);
+			#site.bi('cost/bag-icon.png');
+			
+			.span {
+				#fe.size(1.6em);
+				#fe.bold(600);
+				#fe.underline();
+			}
+		}
+		.body {
+			#fe.size(1.6em);
+			#fe.lh(1.5em);
+			margin:1.25em 0;
+			
+			p {
+				.mp0();
+			}
+		}
+		.footer {
+			border-top:1px #7c7c7c dotted;
+			padding-top:1em;
+			
+			.number {
+				#fe.size(3.6em);
+				#fe.bold(700);
+				#fe.ff(pnb);
+			}
+			
+			.text {
+				#fe.size(1.6em);
+			}
+			
+		}
+	}
+	
+	.img-bnr {
+		margin: 4em auto;
+		
+		@media @media-size-sm {
+			display:inline-block;
+			margin-top:0em;
+			margin-left:3%;
+			#fe.w(45%);
+		}
+		
+		a {
+			display:inline-block;
+			transition:all @trans-speed / 2 linear;
+			outline:0px #ffb32a solid;
+			outline-offset:0px;
+			
+			&:hover {
+				outline:5px #ffb32a solid;
+				outline-offset:-5px;
+			}
+		}
+		
+		img {
+			display:block;
+			max-width:100%;
+			margin:0 auto;
+		}
+		
+	}
+	
+	.table-switcher {
+		display:table;
+		#fe.w(100%);
+		position:relative;
+		z-index:2;
+		
+		.switcher-row {
+			display:table-row;
+		}
+		.switcher {
+			transition:all @trans-speed / 2 linear;
+			display:table-cell;
+			text-align:center;
+			border-left:1px transparent dotted;
+			border-top:1px transparent dotted;
+			border-right:1px transparent dotted;
+			
+			@media @media-size-xs {
+				vertical-align:middle;
+			}
+			
+			&.active {
+				
+				border-left:1px #7c7c7c dotted;
+				border-top:1px #7c7c7c dotted;
+				border-right:1px #7c7c7c dotted;
+				position:relative;
+				
+				&:after {
+					content:'';
+					position:absolute;
+					left:0;
+					top:100%;
+					#fe.bg(#ffffff);
+					#fe.w(100%);
+					#fe.h(4px);
+				}
+				
+				a {
+					#fe.bold(700);
+					
+					
+				}
+				
+				&.sts {
+					a {
+						#fe.color(#ffd77d);
+					}
+				}
+				&.mil-volna {
+					a {
+						#fe.color(#0568AE);
+					}
+				}
+				
+				&.vizavi {
+					a {
+						#fe.color(#cc3300);
+					}
+				}
+				
+			}
+			
+			a {
+				transition:all @trans-speed / 2 linear;
+				display:inline-block;
+				#fe.w(100%);
+				#fe.ff(pnr);
+				#fe.color(#333333);
+				#fe.bold(300);
+				#fe.size(2.4em);
+				padding:0.6em 2em;
+				
+				@media @media-size-xs {
+					#fe.size(1.8em);
+					padding:0.6em 0em;
+				}
+			}
+		}
+	}
+	
+	.cost-table.as-table {
+		transition:all @trans-speed linear;
+		display:none;
+		position:relative;
+		z-index:1;
+		#fe.ff(pnr);
+		#fe.color(#333333);
+		#fe.size(1.6em);
+		opacity:0;
+		
+		&.active {
+			display:table;
+			opacity:1;
+		}
+		
+		.as-cell {
+			border:1px #7c7c7c dotted;
+			border-left:1px transparent dotted;
+			padding:1.5em;
+			vertical-align:baseline;
+			
+			@media @media-size-xs {
+				padding:0.6em 0.4em;
+			}
+			
+			&:first-child {
+				border-left:1px #7c7c7c dotted;
+				
+				@media @media-size-xs {
+					vertical-align:middle;
+				}
+			}
+			
+			&:nth-child(1) {
+				#fe.w(47%);
+			}
+			&:nth-child(2) {
+				#fe.w(30%);
+				vertical-align:middle;
+				text-align:center;
+			}
+			&:nth-child(3) {
+				#fe.w(23%);
+				vertical-align:middle;
+				text-align:center;
+			}
+			
+			.number {
+				#fe.size(1.5em);
+				#fe.bold(700);
+			}
+			.text {
+			
+			}
+		}
+		
+	}
+	
+	.other-service {
+		margin:4em 0 5.5em;
+		#fe.ff(pnr);
+		
+		@media @media-size-xs {
+			padding:0 1.5em;
+		}
+		@media @media-size-sm {
+			padding:0 1.5em;
+		}
+		
+		.title {
+			#fe.color(#2c2a2a);
+			#fe.size(3em);
+			margin-bottom:0.67em;
+		}
+		
+		.body {
+			#fe.color(#666666);
+			#fe.size(1.6em);
+		}
+		
+	}
 	
 }
