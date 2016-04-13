@@ -1,3 +1,77 @@
 .b-vizavi-about {
+	margin-top:6.5em;
+	margin-bottom:6.5em;
+	
+	.vizavi-logo {
+		float:left;
+		margin-left:-4em;
+		margin-right:6em;
+		margin-bottom:4em;
+		max-width:100%;
+		
+		@media @media-size-xs {
+			& {
+				float:initial;
+				display:block;
+				width:80%;
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+	}
+	
+	.header {
+		#fe.ff(asp);
+		#fe.color(#333333);
+		#fe.size(3.6em);
+		
+		@media @media-size-xs {
+			& {
+				#fe.size(2.4em);
+				padding:0 0.5em;
+			}
+		}
+	}
+	
+	.body {
+		margin:2.66666666em auto;
+		#fe.ff(asp);
+		#fe.color(#333333);
+		#fe.size(1.8em);
+		#fe.lh(1.33333333em);
+		
+		@media @media-size-xs {
+			& {
+				#fe.size(1.5em);
+				padding:0 1em;
+			}
+		}
+		
+		@media @media-size-sm {
+			& {
+				padding:0 1em;
+			}
+		}
+	}
+	
+	.footer {
+		#fe.ff(asp);
+		#fe.color(#333333);
+		#fe.size(3em);
+		text-align:right;
+		
+		@media @media-size-xs {
+			& {
+				#fe.size(2.1em);
+				padding:0 1em;
+			}
+		}
+		
+		@media @media-size-sm {
+			& {
+				padding:0 0.5em;
+			}
+		}
+	}
 	
 }

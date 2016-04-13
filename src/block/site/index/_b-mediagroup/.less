@@ -1,3 +1,172 @@
 .b-mediagroup {
+	padding-top:10em;
+	padding-bottom:15em;
+	position:relative;
+	overflow:hidden;
+	
+	@media @media-size-xs {
+		& {
+			padding-top:5em;
+			padding-bottom:5em;
+		}
+	}
+	
+	&:after {
+		content:'';
+		position:absolute;
+		left:-5%;
+		bottom:-160px;
+		transform:rotate(-6deg);
+		#fe.w(200%);
+		#fe.h(350px);
+		#fe.bg(#fff9e9);
+		z-index:-1;
+		
+		@media @media-size-xs {
+			& {
+				bottom:-280px;
+			}
+		}
+	}
+	
+	.title {
+		#fe.ff(asp);
+		#fe.size(4.8em);
+		#fe.bold(400);
+		#fe.color(#151515);
+		
+		@media @media-size-xs {
+			& {
+				text-align:center;
+				#fe.size(3.2em);
+			}
+		}
+	}
+	
+	.position {
+		max-width:800px;
+		margin:1.5em auto 4em;
+		#fe.w(100%);
+		#fe.ff(aspl);
+		#fe.size(2.4em);
+		#fe.bold(400);
+		#fe.color(#333333);
+		
+		@media @media-size-xs {
+			& {
+				#fe.size(2em);
+				padding:0 1em;
+				text-align:justify;
+			}
+		}
+		
+	}
+	
+	.our-service {
+		outline:3px #ffd77d solid;
+		text-align:center;
+		padding:1em 1.5em;
+		#fe.ff(aspl);
+		#fe.size(4.2em);
+		#fe.color(#181818);
+		
+		@media @media-size-xs {
+			& {
+				padding:1em 0.2em;
+				#fe.size(3.2em);
+			}
+		}
+	}
+	
+	.opportunity {
+		position:relative;
+		padding-top:2em;
+		margin-top:5em;
+		margin-bottom:5em;
+		
+		&:before {
+			content:'';
+			position:absolute;
+			bottom:4em;
+			left:-12em;
+			#fe.w(501px);
+			#fe.h(493px);
+			#fe.bpos();
+			#fe.brep();
+			#site.bi('index/opportunity-before-bg.png');
+			
+			@media @media-size-xs {
+				& {
+					content:none;
+				}
+			}
+			@media @media-size-sm {
+				& {
+					content:none;
+				}
+			}
+			@media @media-size-md {
+				& {
+					left:-16em;
+				}
+			}
+		}
+		
+		.opportunity-list {
+			margin:0 0 0 auto;
+			padding-top:4em;
+			#fe.w(65%);
+			
+			@media @media-size-xs {
+				& {
+					#fe.w(100%);
+					padding-top:0em;
+				}
+			}
+			
+			@media @media-size-sm {
+				& {
+					#fe.w(100%);
+					padding-top:0em;
+				}
+			}
+			
+			.item {
+				display:inline-flex;
+				align-items:center;
+				position:relative;
+				padding-left:50px;
+				margin-bottom:3.5em;
+				min-height:100px;
+				#fe.ff(asp);
+				#fe.size(2.2em);
+				
+				@media @media-size-xs {
+					& {
+						margin-bottom:1em;
+						padding-left:25px;
+					}
+				}
+				
+				&:before {
+					content:'';
+					position:absolute;
+					left:0;
+					top:0;
+					border-radius:50%;
+					#fe.w(100px);
+					#fe.h(100px);
+					#fe.bg(rgba(255, 215, 125, 0.15));
+					
+					@media @media-size-xs {
+						& {
+							left:5px;
+						}
+					}
+				}
+				
+			}
+		}
+	}
 	
 }

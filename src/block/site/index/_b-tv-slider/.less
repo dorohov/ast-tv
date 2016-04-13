@@ -1,3 +1,210 @@
 .b-tv-slider {
+	position:relative;
+	margin-top:-4em;
+	#fe.z(1);
+	#fe.bpos();
+	#fe.brep();
+	#fe.bsize(cover);
+	#site.bi('index/tv-slider-bg.jpg');
+	
+	@media @media-size-xs {
+		& {
+			margin-top:0em;
+		}
+	}
+	
+	.title {
+		margin-top:2em;
+		#fe.ff(pnr);
+		#fe.color(#ffffff);
+		#fe.size(6em);
+		#fe.lh(1em);
+		#fe.bold(600);
+		
+		@media @media-size-xs {
+			& {
+				text-align:center;
+			}
+		}
+		
+		@media @media-size-sm {
+			& {
+				text-align:center;
+			}
+		}
+		
+		@media @media-size-md {
+			& {
+				margin-top:3em;
+				#fe.size(4em);
+			}
+		}
+	}
+	.where {
+		margin:1.5em auto;
+		#fe.ff(pnr);
+		#fe.color(#ffffff);
+		#fe.size(2.5em);
+		#fe.lh(1.5em);
+		
+		@media @media-size-xs {
+			& {
+				text-align:center;
+			}
+		}
+		
+		@media @media-size-sm {
+			& {
+				text-align:center;
+			}
+		}
+		
+		@media @media-size-md {
+			& {
+				#fe.size(1.8em);
+			}
+		}
+	}
+	.red-btn-cont {
+		margin-bottom:10em;
+		
+		@media @media-size-xs {
+			& {
+				margin-bottom:2em;
+				text-align:center;
+			}
+		}
+		
+		@media @media-size-sm {
+			& {
+				margin-bottom:2em;
+				text-align:center;
+			}
+		}
+		
+		.red-btn {
+			display:inline-block;
+			padding:1.5em 4em;
+			transition:all @trans-speed / 1.5 ease;
+			#fe.ff(pnr);
+			#fe.size(1.5em);
+			#fe.color(#ffffff);
+			#fe.underline(none);
+			#fe.uppercase;
+			
+			&:hover {
+				#fe.color(#c30);
+				#fe.bg(#ffffff);
+			}
+		}
+	}
+	
+	.slider-cont {
+		position:relative;
+		
+		@media @media-size-xs {
+			& {
+				min-height:550px;
+				overflow:hidden;
+			}
+		}
+		
+		@media @media-size-sm {
+			& {
+				min-height:550px;
+			}
+		}
+		
+		@media @media-size-md {
+			& {
+				min-height:550px;
+			}
+		}
+		
+		.tv {
+			position:absolute;
+			bottom:4em;
+			right:0;
+			max-width:100%;
+			#fe.w(665px);
+			#fe.h(447px);
+			#fe.bpos();
+			#fe.brep();
+			#site.bi('index/tv-slider-tv.png');
+			
+			@media @media-size-xs {
+				& {
+					right:0em;
+				}
+			}
+			
+			@media @media-size-sm {
+				& {
+					right:5em;
+				}
+			}
+			
+			.screen {
+				position:absolute;
+				left:3%;
+				top:4%;
+				overflow:hidden;
+				#fe.bg(#ffffff);
+				#fe.w(94%);
+				#fe.h(80%);
+				
+				.item {
+					position:absolute;
+					transition:all @trans-speed ease;
+					top:0;
+					#fe.w(100%);
+					#fe.h(100%);
+					#fe.bsize(cover);
+					#fe.bpos();
+					#fe.brep();
+					
+					&.active {
+						left:0;
+						#site.bi('index/screen-item-bg.png');
+					}
+					&.prev {
+						left:-100%;
+						#site.bi('index/screen-item-bg.png');
+					}
+					&.next {
+						left:100%;
+						#site.bi('index/screen-item-bg.png');
+					}
+				}
+			}
+			.tv-btn {
+				position:absolute;
+				top:0;
+				#fe.w(108px);
+				#fe.h(100%);
+				#fe.bpos(center 45%);
+				#fe.brep();
+				
+				&.left {
+					left:-40px;
+					#site.bi('index/tv-btn-left.png');
+				}
+				&.right {
+					right:-60px;
+					#site.bi('index/tv-btn-right.png');
+				}
+			}
+		}
+		.radio {
+			position:absolute;
+			bottom:1.5em;
+			right:-6em;
+			#fe.w(272px);
+			#fe.h(210px);
+			#fe.bpos();
+			#fe.brep();
+			#site.bi('index/tv-slider-radio.png');
+		}
+	}
 	
 }

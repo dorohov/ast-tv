@@ -1,3 +1,77 @@
 .b-order-ad {
+	text-align:center;
+	padding-top:23em;
+	#fe.bg(rgba(251, 194, 40, 0.1));
+	#fe.bpos(top center);
+	#fe.brep();
+	#fe.bsize(cover);
+	#site.bi('index/b-order-ad-bg.png');
 	
+	@media @media-size-xs {
+		&{
+			#fe.bsize(auto 100%);
+			padding-top:14em;
+		}
+	}
+	
+	.title {
+		text-align:center;
+		#fe.ff(aspl);
+		#fe.color(#ffffff);
+		#fe.size(4.8em);
+		
+		@media @media-size-xs {
+			& {
+				#fe.size(2.4em);
+			}
+		}
+	}
+	.big-phone {
+		display:inline-block;
+		text-align:center;
+		margin-top:7em;
+		margin-bottom:11em;
+		#fe.lh(6.8em);
+		#fe.ff(aspl);
+		#fe.color(#ffffff);
+		
+		@media @media-size-xs {
+			& {
+				margin-top:3em;
+				margin-bottom:2em;
+				#fe.lh(3.2em);
+			}
+		}
+		
+		&:hover {
+			.code {
+				#fe.underline();
+			}
+			.num {
+				#fe.underline();
+			}
+		}
+		
+		.code {
+			display:inline-block;
+			#fe.size(3.2em);
+			
+			@media @media-size-xs {
+				& {
+					#fe.size(2em);
+				}
+			}
+		}
+		.num {
+			display:inline-block;
+			#fe.size(8em);
+			#fe.bold(700);
+			
+			@media @media-size-xs {
+				& {
+					#fe.size(4em);
+				}
+			}
+		}
+	}
 }

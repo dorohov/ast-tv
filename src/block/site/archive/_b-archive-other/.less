@@ -1,3 +1,76 @@
 .b-archive-other {
+	margin-top:8em;
+	margin-bottom:9em;
 	
+	.title {
+		text-align:center;
+		#fe.ff(aspl);
+		#fe.color(#333333);
+		#fe.size(4.8em);
+	}
+	.stick {
+		margin:3em auto;
+		#fe.bg(#ffc031);
+		#fe.w(34px);
+		#fe.h(2px);
+	}
+	.preview {
+		text-align:center;
+		#fe.ff(aspl);
+		#fe.color(#666666);
+		#fe.size(2em);
+		
+		@media @media-size-xs and (orientation: portrait) {
+			padding:0 1em;
+		}
+	}
+	
+	.download-cont {
+		margin:7em auto 0;
+		width:100%;
+		max-width:900px;
+		
+		.item {
+			text-align:center;
+			
+			a {
+				position:relative;
+				display:inline-block;
+				margin-top:3em;
+				padding:0 1em;
+				#fe.color(#333333);
+				#fe.ff(aspl);
+				#fe.size(2em);
+				
+				&:hover {
+					&:before {
+						bottom:110%;
+					}
+				}
+				
+				&:before {
+					content:'';
+					position:absolute;
+					left:0%;
+					bottom:125%;
+					transition:all @trans-speed / 1.5 ease;
+					#fe.h(25px);
+					#fe.w(100%);
+					#fe.brep();
+					#fe.bpos(top center);
+					#site.bi('archive/video-btn-download.png');
+				}
+				
+				&:after {
+					content:'';
+					position:absolute;
+					left:0%;
+					top:40%;
+					#fe.h(20%);
+					#fe.w(100%);
+					#fe.bg(rgba(255, 192, 49, 0.3));
+				}
+			}
+		}
+	}
 }

@@ -1,3 +1,89 @@
 .b-vizavi-body {
+	margin-bottom:10em;
+	
+	.information {
+		outline:2px #ffd77d dotted;
+		
+		.item {
+			img {
+				display:block;
+				margin:10em auto;
+				
+				@media @media-size-xs {
+					& {
+						margin:3em auto;
+					}
+				}
+			}
+		}
+	}
+	
+	.info-btns {
+		text-align:center;
+		margin-top:7em;
+		
+		a {
+			position:relative;
+			display:inline-block;
+			padding-top:60px;
+			margin:0 3em;
+			transition:all @trans-speed / 2 ease;
+			#fe.ff(asp);
+			#fe.color(#333333);
+			#fe.size(2em);
+			#fe.underline();
+			#fe.w(180px);
+			#fe.h(126px);
+			#fe.z(2);
+			
+			@media @media-size-xs {
+				& {
+					margin:1em 3em;
+				}
+			}
+			
+			&:hover {
+				#fe.underline(none);
+				
+				&:before {
+					#fe.bg(rgba(255, 215, 125, 0.5));
+				}
+			}
+			
+			&:before {
+				content:'';
+				position:absolute;
+				top:0;
+				bottom:0;
+				left:27px;
+				right:27px;
+				transition:all @trans-speed / 2 ease;
+				#fe.bg(rgba(255, 215, 125, 0.2));
+				#fe.z(-1);
+			}
+			&:after {
+				content:'';
+				position:absolute;
+				top:18px;
+				left:0px;
+				right:0px;
+				#fe.h(32px);
+				#fe.bpos();
+				#fe.brep();
+			}
+			
+			&.program {
+				&:after {
+					#site.bi('vizavi/info-btns-program.png');
+				}
+			}
+			&.archive {
+				&:after {
+					#site.bi('vizavi/info-btns-archive.png');
+				}
+			}
+		}
+		
+	}
 	
 }

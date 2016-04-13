@@ -2,3 +2,4 @@ $(function(){var s={xs:{min:0,max:768},sm:{min:767,max:992},md:{min:991,max:1200
 $(function(){$(".scroll-container").trigger("init"),console.log("window-resize .scroll-container init")});
 $(function(){$(".b-archive-video .video-list").trigger("fecss.video-list.init")});
 $(function(){var n=function(){var n=new ymaps.Map("contact-map-cont",{center:[52.979427,36.062993],zoom:17}),a=new ymaps.Placemark([52.979427,36.062993],{hintContent:"Москва!",balloonContent:"Столица России"});n.geoObjects.add(a)},a=$("#contact-map-cont");a.size()&&ymaps.ready(n)});
+$(function(){$(".b-tv-slider .slider-cont .tv").trigger("fecss.b-tv-slider.slider-cont.tv.init")});
