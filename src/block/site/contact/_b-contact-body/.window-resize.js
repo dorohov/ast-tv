@@ -8,8 +8,11 @@ $(function(){
 		});
 		
 		var contactMark = new ymaps.Placemark([52.979427, 36.062993], {
-			hintContent: 'Москва!',
-			balloonContent: 'Столица России'
+				hintContent: 'Москва!',
+				balloonContent: 'Столица России',
+			}, {
+				preset: 'islands#dotIcon',
+				iconColor: '#c30',
 		});
 		
 		contactMap.geoObjects.add(contactMark);
