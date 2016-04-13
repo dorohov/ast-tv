@@ -59,6 +59,13 @@
 					&:before {
 						bottom:110%;
 					}
+					
+					&:after {
+						left:0%;
+						top:40%;
+						#fe.h(20%);
+						#fe.w(100%);
+					}
 				}
 				
 				&:before {
@@ -77,10 +84,11 @@
 				&:after {
 					content:'';
 					position:absolute;
-					left:0%;
-					top:40%;
-					#fe.h(20%);
-					#fe.w(100%);
+					transition:all @trans-speed / 2 ease;
+					left:50%;
+					top:50%;
+					#fe.h(0%);
+					#fe.w(0%);
 					#fe.bg(rgba(255, 192, 49, 0.3));
 				}
 			}

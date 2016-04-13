@@ -1,3 +1,4 @@
+/*
 $(function(){
 	
 	var rDrob = function(m,n) {
@@ -52,3 +53,4 @@ $(window).on('scroll', function(){
 		
 	})
 });
+*/
