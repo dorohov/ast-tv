@@ -21,7 +21,7 @@ $(function(){
 			var tz = rInt(0, 200);
 			var scale = rInt(0.5, 2.5) + rDrob();
 			var psp = rInt(0, 3);
-			var deg = rInt(1, 89);
+			var deg = 19;//rInt(1, 89);
 			
 			var _top = rInt(0, pch);
 			var _left = rInt(0, _pw);
