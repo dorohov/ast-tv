@@ -2338,6 +2338,7 @@ body {
 		}
 	}
 }
+/*
 .goldenrain {
 	display:inline-block;
 	position:absolute;
@@ -2348,6 +2349,35 @@ body {
 	#fe.w(54px);
 	#fe.h(4px);
 	#fe.bg(#ffd77d);
+}
+*/
+.parallax-goldenrain {
+	position:fixed;
+	top:0;
+	transform-origin: center center;
+	transform: perspective(0px);
+	#fe.w(20%);
+	#fe.h(100%);
+	#fe.z(10);
+	
+	&.left {
+		left:0;
+	}
+	&.right {
+		right:0;
+	}
+	
+	.goldenrain {
+		display:inline-block;
+		position:absolute;
+		border-radius:2px;
+		transition:all @trans-speed ease;
+		transform-origin: center center;
+		box-shadow: 0 0 10px rgba(255,255,255,0.75);
+		#fe.w(54px);
+		#fe.h(4px);
+		#fe.bg(#ffd77d);
+	}
 }
 .red-btn {
 	#fe.bg(#eb4724);

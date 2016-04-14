@@ -1,1 +1,2 @@
 $(function(){var a=$(document).scrollTop(),o=$(".go-to-top");o.hasClass("active")?200>a&&o.removeClass("active"):a>200&&o.addClass("active")});
+$(function(){var a=$(document).scrollTop();$(".parallax-goldenrain .goldenrain").each(function(t){var n=$(this);n.css({top:n.attr("data-top")-n.attr("data-p-speed")*a+"px"})})});
