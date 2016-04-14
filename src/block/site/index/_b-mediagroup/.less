@@ -149,15 +149,28 @@
 					}
 				}
 				
+				&:hover {
+					&:before {
+						left:10px;
+						top:10px;
+						#fe.bg(rgba(255, 215, 125, 0.5));
+						#fe.w(80px);
+						#fe.h(80px);
+						#fe.z(-1);
+					}
+				}
+				
 				&:before {
 					content:'';
 					position:absolute;
 					left:0;
 					top:0;
 					border-radius:50%;
+					transition:all @trans-speed / 2 ease;
 					#fe.w(100px);
 					#fe.h(100px);
 					#fe.bg(rgba(255, 215, 125, 0.15));
+					#fe.z(0);
 					
 					@media @media-size-xs {
 						& {

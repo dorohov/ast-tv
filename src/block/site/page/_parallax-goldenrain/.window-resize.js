@@ -16,7 +16,7 @@ $(function(){
 		var pch = $('.page-container').outerHeight(true);
 		var _pw = _parent.outerWidth(true) - 60;
 		
-		for(var i = 0; i < 19; i++) {
+		for(var i = 0; i < 12; i++) {
 			
 			var tz = rInt(0, 200);
 			var scale = rInt(0.5, 2.5) + rDrob();

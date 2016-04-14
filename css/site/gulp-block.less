@@ -1160,15 +1160,28 @@
 					}
 				}
 				
+				&:hover {
+					&:before {
+						left:10px;
+						top:10px;
+						#fe.bg(rgba(255, 215, 125, 0.5));
+						#fe.w(80px);
+						#fe.h(80px);
+						#fe.z(-1);
+					}
+				}
+				
 				&:before {
 					content:'';
 					position:absolute;
 					left:0;
 					top:0;
 					border-radius:50%;
+					transition:all @trans-speed / 2 ease;
 					#fe.w(100px);
 					#fe.h(100px);
 					#fe.bg(rgba(255, 215, 125, 0.15));
+					#fe.z(0);
 					
 					@media @media-size-xs {
 						& {
@@ -1427,7 +1440,7 @@
 		}
 	}
 	.where {
-		margin:1.5em auto;
+		margin:1em auto 2em;
 		#fe.ff(pnr);
 		#fe.color(#ffffff);
 		#fe.size(2.5em);
@@ -1538,6 +1551,10 @@
 				#fe.bg(#ffffff);
 				#fe.w(94%);
 				#fe.h(80%);
+				#fe.bsize(cover);
+				#fe.bpos();
+				#fe.brep();
+				#site.bi('index/screen-bg.png');
 				
 				.item {
 					position:absolute;
