@@ -29,7 +29,7 @@ $(function(){
 			var span = $('<span/>', {
 				'class' : 'goldenrain',
 				'data-top' : _top,
-				'data-p-speed' : rInt(0, 3) + rDrob(),
+				'data-p-speed' : rInt(0, 1.5) + rDrob(),
 			})
 				.css({
 					top : _top + 'px',
