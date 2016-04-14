@@ -530,74 +530,6 @@
 	}
 	
 }
-.b-contact-body {
-	position:relative;
-	overflow:hidden;
-	padding-top:7em;
-	padding-bottom:2em;
-	
-	&:before {
-		content:'';
-		position:absolute;
-		left:-5%;
-		bottom:-100px;
-		transform:rotate(-6deg);
-		#fe.w(200%);
-		#fe.h(350px);
-		#fe.bg(#fff9e9);
-		z-index:-1;
-	}
-	
-	.contact-item {
-		margin-bottom:5em;
-		#fe.h(5em);
-		#fe.lh(5em);
-		#fe.bpos(left center);
-		#fe.brep();
-		
-		@media @media-size-xs {
-			& {
-				margin-left:2em;
-			}
-		}
-		
-		a {
-			#fe.ff(aspl);
-			#fe.size(2em);
-			#fe.color(#333333);
-			margin-left:1.75em;
-		}
-		
-		&.phone {
-			#site.bi('contact/contact-item-phone.png');
-		}
-		&.geo {
-			#site.bi('contact/contact-item-geo.png');
-		}
-		&.email {
-			#site.bi('contact/contact-item-email.png');
-		}
-	}
-	
-	.map-cont {
-		#fe.w(100%);
-		#fe.h(45em);
-		box-shadow:12px 12px 12px 4px rgba(255,255,255,0.1);
-		
-		@media @media-size-xs {
-			& {
-				box-shadow:none;
-				#fe.h(25em);
-			}
-		}
-		
-		@media @media-size-sm {
-			& {
-				box-shadow:none;
-			}
-		}
-	}
-}
 .b-contact-form {
 	#fe.bg(#fff9e9);
 	
@@ -743,6 +675,74 @@
 			
 		}
 		
+	}
+}
+.b-contact-body {
+	position:relative;
+	overflow:hidden;
+	padding-top:7em;
+	padding-bottom:2em;
+	
+	&:before {
+		content:'';
+		position:absolute;
+		left:-5%;
+		bottom:-100px;
+		transform:rotate(-6deg);
+		#fe.w(200%);
+		#fe.h(350px);
+		#fe.bg(#fff9e9);
+		z-index:-1;
+	}
+	
+	.contact-item {
+		margin-bottom:5em;
+		#fe.h(5em);
+		#fe.lh(5em);
+		#fe.bpos(left center);
+		#fe.brep();
+		
+		@media @media-size-xs {
+			& {
+				margin-left:2em;
+			}
+		}
+		
+		a {
+			#fe.ff(aspl);
+			#fe.size(2em);
+			#fe.color(#333333);
+			margin-left:1.75em;
+		}
+		
+		&.phone {
+			#site.bi('contact/contact-item-phone.png');
+		}
+		&.geo {
+			#site.bi('contact/contact-item-geo.png');
+		}
+		&.email {
+			#site.bi('contact/contact-item-email.png');
+		}
+	}
+	
+	.map-cont {
+		#fe.w(100%);
+		#fe.h(45em);
+		box-shadow:12px 12px 12px 4px rgba(255,255,255,0.1);
+		
+		@media @media-size-xs {
+			& {
+				box-shadow:none;
+				#fe.h(25em);
+			}
+		}
+		
+		@media @media-size-sm {
+			& {
+				box-shadow:none;
+			}
+		}
 	}
 }
 .b-cost-body {
