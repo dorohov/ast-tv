@@ -2299,10 +2299,10 @@
 		
 		&:hover {
 			.code {
-				#fe.underline();
+				#fe.underline(none);
 			}
 			.num {
-				#fe.underline();
+				#fe.underline(none);
 			}
 		}
 		
@@ -2672,6 +2672,13 @@
 			#fe.bpos();
 			#fe.brep();
 			#site.bi('index/tv-slider-radio.png');
+			
+			@media @media-size-xs {
+				& {
+					bottom:-0.5em;
+					right:-11em;
+				}
+			}
 		}
 	}
 	
@@ -2696,7 +2703,7 @@
 		.input-cont {
 			position:relative;
 			z-index:1;
-			margin: 4.5em 3em 4.5em 0;
+			margin: 4.5em 3em 4.5em 4em;
 			
 			@media @media-size-xs {
 				& {
@@ -3301,6 +3308,19 @@ body {
 				display:table-cell;
 				text-align:center;
 				vertical-align:middle;
+				padding:0 3em;
+				
+				&:nth-child(1) {
+					padding-left:6em;
+				}
+				
+				.mainpage &:nth-child(2) {
+					padding-left:6em;
+				}
+				
+				&:last-child {
+					padding-right:6em;
+				}
 				
 				a {
 					display:inline-block;
