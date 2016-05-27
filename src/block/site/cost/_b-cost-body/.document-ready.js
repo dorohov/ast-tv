@@ -12,5 +12,9 @@ $(document.body).on('click.fecss.table-switcher.switcher', '.table-switcher .swi
 	
 	$('.cost-table').removeClass('active');
 	$('.cost-table[data-table-filter="' + filter + '"]').addClass('active');
+	
+	$('.other-service .body').removeClass('active');
+	$('.other-service .body[data-table-filter="' + filter + '"]').addClass('active');
+	
 });
 $('.table-switcher .switcher-row .switcher:nth-child(1) a').trigger('click.fecss.table-switcher.switcher');
