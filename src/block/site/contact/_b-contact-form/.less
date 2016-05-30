@@ -1,5 +1,5 @@
 .b-contact-form {
-	#fe.bg(#fff9e9);
+	#fe.bg(#fbeabd);
 	
 	.title {
 		#fe.ff(aspl);
@@ -69,9 +69,16 @@
 				display:block;
 				padding:0.5em 0;
 				z-index:2;
-				#fe.color(#ffc031);
+				min-height: 2em;
+				#fe.color(#000000);
 				#fe.ff(aspl);
 				#fe.size(2em);
+				
+				span {
+					position:absolute;
+					left:0;
+					bottom:100%;
+				}
 			}
 			
 			input, textarea {
@@ -94,6 +101,7 @@
 				#fe.h(6.5em);
 				#fe.lh(1.2em);
 				padding:0.5em 0;
+				#fe.w(90%);
 				
 				@media @media-size-xs {
 					& {
