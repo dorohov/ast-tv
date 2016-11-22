@@ -1,0 +1,6 @@
+.ui-datepicker {
+	width: 100%;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+	padding:1em 0.2em;
+}
