@@ -4,3 +4,6 @@
 .ui-datepicker td span, .ui-datepicker td a {
 	padding:1em 0.2em;
 }
+.ui-datepicker td span, .ui-datepicker td a {
+	text-align:center;
+}
