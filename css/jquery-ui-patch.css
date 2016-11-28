@@ -7,3 +7,89 @@
 .ui-datepicker td span, .ui-datepicker td a {
 	text-align:center;
 }
+
+.ui-datepicker-calendar thead tr:first-child {
+	background-color:#ff9a2e;
+	color:#ffffff;
+	text-transform:uppercase;
+	font-size:12px;
+}
+.ui-datepicker-calendar tbody, .ui-datepicker-calendar tbody td, .ui-datepicker-calendar tbody td a.ui-state-default {
+	background-color:#e2e1e1;
+}
+.ui-datepicker-calendar tbody td {
+	border:1px #ffffff solid;
+}
+.ui-datepicker-calendar tbody td a.ui-state-default {
+	border:none;
+	font-size:17px;
+	color:#868686;
+	font-weight:bold;
+	padding:9px 2px;
+	transition:all 0.256s ease;
+}
+.ui-datepicker-calendar tbody td.ui-datepicker-current-day a.ui-state-default {
+	background-color:#fb5428;
+	color:#ffffff;
+}
+.ui-datepicker-calendar tbody td a.ui-state-default:hover {
+	background-color:#fb5428;
+	color:#ffffff;
+}
+
+.ui-corner-all {
+	border-radius:0 !important;
+}
+
+.cal-datepicker .ui-datepicker {
+	border:none;
+	padding:0;
+}
+
+.cal-datepicker .ui-datepicker .ui-datepicker-header {
+	background-color:#fb5428;
+	padding: 1em 0.3em;
+}
+.cal-datepicker .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+	color:#ffffff;
+	font-size:24px;
+	font-family: pnr;
+}
+
+.cal-datepicker .ui-datepicker .ui-datepicker-header .ui-datepicker-prev, .cal-datepicker .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+	height:100%;
+	top:0px;
+}
+.cal-datepicker .ui-datepicker .ui-datepicker-header .ui-icon {
+	
+}
+.cal-datepicker .ui-datepicker .ui-datepicker-header .ui-state-hover {
+	background-color:transparent;
+	cursor:pointer;
+	border:none;
+}
+.cal-datepicker .ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+	left:10px;
+}
+.cal-datepicker .ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon {
+	background-image:url(./cal-a-l.png);
+	background-position:0 0;
+}
+.cal-datepicker .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+	right:10px;
+}
+.cal-datepicker .ui-datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon {
+	background-image:url(./cal-a-r.png);
+	background-position:0 0;
+}
+
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {
+	content:none;
+}
+
+/*
+#fb5428
+#ff9a2e
+#e2e1e1
+#868686
+*/

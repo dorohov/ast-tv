@@ -1,3 +1,69 @@
 .b-holiday-cont {
+	margin:55px 0;
+	
+	.cal-day {
+		max-width:96%;
+		margin:0 0 0 auto;
+		text-align:center;
+		padding:40px 0;
+		#fe.ff(pnr);
+		#fe.bold();
+		#fe.size(80px);
+		#fe.bg(#ff9a2e);
+		#fe.color(#ffffff);
+	}
+	
+	.cal-datepicker {
+		max-width:96%;
+		margin:0 0 0 auto;
+	}
+}
+
+.b-holiday-day {
+	margin:55px 0;
+	
+	.header {
+		padding:30px 55px;
+		#site.bi('index/smile-header-bg.png');
+		#fe.brep();
+		#fe.bsize(cover);
+		
+		.block-title {
+			#fe.color(#ffffff);
+			#fe.size(60px);
+			#fe.ff(pnr);
+			#fe.lh(70px);
+			#fe.bold();
+		}
+	}
+	
+	.content {
+		padding:30px 55px;
+		#fe.bg(#ffffff);
+		#fe.color(#151515);
+		#fe.ff(pnr);
+		#fe.size(16px);
+		
+		.more {
+			margin:20px 0 0;
+			
+			a {
+				#fe.ff(pnr);
+				#fe.color(#fb5428);
+				#fe.uppercase();
+				#fe.underline();
+				#fe.bold();
+				
+				&:hover {
+					#fe.underline(none);
+				}
+			}
+		}
+	}
+	
+	.footer {
+		#fe.bg(#fb5428);
+		#fe.h(50px);
+	}
 	
 }
