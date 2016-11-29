@@ -97,6 +97,6 @@
 		},
 	});
 	
-	cal.find('.ui-datepicker-today a').trigger('click');
+	//cal.find('.ui-datepicker-today a').trigger('click');
 	
 })();
