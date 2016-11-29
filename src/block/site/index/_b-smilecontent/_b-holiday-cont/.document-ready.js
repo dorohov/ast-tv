@@ -69,7 +69,7 @@
 			
 			var item_id = getDateContentByDate('' + month + day);
 			
-			$.get(base_url,
+			$.post(base_url,
 				{
 					'action':'azbnajax_call',
 					'method':'getDateContentByDate',
@@ -98,5 +98,10 @@
 	});
 	
 	//cal.find('.ui-datepicker-today a').trigger('click');
+	
+	$('.b-holiday-day .more a').on('click.azbn', function(event){
+		cal.find('.ui-datepicker-today a').trigger('click');
+		//alert(1);
+	})
 	
 })();
