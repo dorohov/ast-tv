@@ -1483,7 +1483,7 @@
 	#fe.brep();
 	#fe.bsize(cover);
 	#site.bi('index/tv-slider-bg.jpg');
-	
+	//background: #ccc;
 	@media @media-size-xs {
 		& {
 			margin-top:0em;
@@ -1608,7 +1608,7 @@
 			#fe.bpos();
 			#fe.brep();
 			#site.bi('index/tv-slider-tv.png');
-			
+		    transform: scale(0.8);
 			@media @media-size-xs {
 				& {
 					right:0em;
@@ -1688,7 +1688,7 @@
 				}
 			}
 		}
-		.radio {
+		/*.radio {
 			position:absolute;
 			bottom:1.5em;
 			right:-6em;
@@ -1704,7 +1704,7 @@
 					right:-11em;
 				}
 			}
-		}
+		}*/
 	}
 	
 }
@@ -1842,7 +1842,11 @@
 		margin:4em 0;
 		width:100%;
 		height:660px;
-		
+		height: 500px;
+		max-width: 890px;
+		margin-left: auto;
+		margin: 4em auto;
+		display: block;
 		@media @media-size-xs {
 			& {
 				height:360px;
@@ -1861,74 +1865,14 @@
 			}
 		}
 		
-		@media @media-size-lg {
+		/*@media @media-size-lg {
 			& {
 				height:660px;
 			}
-		}
+		}*/
 	}
 	
 }
-body {
-	
-	&[class*='theme-'], *[class*='theme-'] {
-		
-		&.theme-dev {
-			
-			@dbg-dline-w:2px;
-			@dbg-sline-w:1px;
-			@dbg-hover-sline-w:5px;
-			
-			outline: @dbg-dline-w dotted red;
-			#fe.bi('chess-bg.png');
-			
-			* {
-				outline:@dbg-dline-w dotted green;
-				
-				&:hover {
-					outline:@dbg-hover-sline-w solid black;
-				}
-				
-				& * {
-					outline:@dbg-dline-w dotted orange;
-					
-					& * {
-						outline:@dbg-dline-w dotted blue;
-						
-						& * {
-							outline:@dbg-sline-w solid red;
-							
-							& * {
-								outline:@dbg-sline-w solid green;
-								
-								& * {
-									outline:@dbg-sline-w solid orange;
-									
-									& * {
-										outline:@dbg-sline-w solid blue;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			
-		}
-		&.theme-b0w {
-			#fe.color(#000000);
-			#fe.bg(#ffffff);
-			overflow-x:hidden;
-		}
-		&.theme-w0b {
-			#fe.color(#ffffff);
-			#fe.bg(#000000);
-		}
-		
-	}
-	
-}
-
 .b-footer {
 	#fe.bg(#cc3300);
 	
@@ -1989,6 +1933,9 @@ body {
 						#fe.brep();
 						#fe.bpos(left center);
 						
+					    width: 160px;
+    					height: 65px;
+    					background-size: contain;
 						&:before {
 							content:none;
 						}
@@ -2137,13 +2084,22 @@ body {
 		
 		.header-row {
 			display:table-row;
+			display: flex;
+			align-items: center;
+    		justify-content: space-between;
 			
 			.header-cell {
 				display:table-cell;
 				vertical-align:middle;
 				padding:3em 0;
 				text-align:right;
-				
+				&.soc{
+					width: 30px;
+					padding: 3em 5px;
+				}
+				&.address{					
+					padding: 3em 15px 3em 0;
+				}
 				&.logo {
 					text-align:left;
 					
@@ -2155,7 +2111,9 @@ body {
 						#site.bi('page/logo-header.png');
 						#fe.brep();
 						#fe.bpos(left center);
-						
+					    width: 160px;
+    					height: 65px;
+    					background-size: contain;
 						&:before {
 							content:none;
 						}
@@ -2191,19 +2149,25 @@ body {
 					#fe.color(#333333);
 					#fe.size(1.6em);
 					#fe.ff(aspl);
-					#fe.lh(20px);
-					
+					#fe.lh(30px);
+					min-width: 30px;
+    				min-height: 30px;
 					&:before {
 						content:'';
 						position:absolute;
 						left:-30px;
 						top:0;
-						#fe.w(20px);
+						#fe.w(30px);
 						#fe.h(100%);
 						#fe.bpos();
 						#fe.brep();
+					}					
+					&.soc{
+						margin: 0;
+						&:before {
+							left: 0;
+						}
 					}
-					
 					&.phone:before {
 						#site.bi('page/header-phone-icon.png');
 					}
@@ -2215,6 +2179,19 @@ body {
 					}
 					&.vk:before {
 						#site.bi('page/header-vk-icon.png');
+						background-size: contain;
+					}
+					&.fb:before {
+						#site.bi('page/header-fb-icon.png');
+						background-size: contain;
+					}
+					&.inst:before {
+						#site.bi('page/header-inst-icon.png');
+						background-size: contain;
+					}
+					&.yb:before {
+						#site.bi('page/header-yb-icon.png');
+						background-size: contain;
 					}
 					
 					&:hover {
@@ -2258,8 +2235,16 @@ body {
 			}
 			
 		}
-		.contact {
-			
+		.soc-row{
+			margin: 10px -10px 0;
+		}
+		.contact {							
+			&.soc{
+				display: inline-block;
+				width: 32px;
+				height: 32px;
+				margin: 0 10px;
+			}
 			a {
 				display:inline-block;
 				cursor:pointer;
@@ -2280,6 +2265,16 @@ body {
 					#fe.h(100%);
 					#fe.bpos();
 					#fe.brep();
+				}				
+				&.soc{
+					margin: 0;
+					width: 100%;
+					height: 100%;
+					&:before {
+						left: 0;
+						width: 100%;
+						height: 100%;
+					}
 				}
 				
 				&.phone:before {
@@ -2293,6 +2288,19 @@ body {
 				}
 				&.vk:before {
 					#site.bi('page/header-vk-icon.png');
+					background-size: contain;
+				}
+				&.fb:before {
+					#site.bi('page/header-fb-icon.png');
+					background-size: contain;
+				}
+				&.inst:before {
+					#site.bi('page/header-inst-icon.png');
+					background-size: contain;
+				}
+				&.yb:before {
+					#site.bi('page/header-yb-icon.png');
+					background-size: contain;
 				}
 				
 				&:hover {
@@ -2361,20 +2369,21 @@ body {
 .b-menu {
 	position:relative;
 	#fe.z(2);
+	background: #ffa623;
 	
-	.colored {
+	/*.colored {
 		#fe.bg(#ffb32a);
 	}
 	
 	.gradiented {
-		/*#fe.bg(linear-gradient(-8deg, rgba(0, 0, 0, 0.17) 44%, rgba(255, 255, 255, 0.17) 56%));*/
+		#fe.bg(linear-gradient(-8deg, rgba(0, 0, 0, 0.17) 44%, rgba(255, 255, 255, 0.17) 56%));
 		background-color:#ffb32a;
 		background:-webkit-linear-gradient(98deg, rgba(0, 0, 0, 0) 44%, rgba(255, 255, 255, 0.17) 56%);
 		background:-moz-linear-gradient(98deg, rgba(0, 0, 0, 0) 44%, rgba(255, 255, 255, 0.17) 56%);
 		background:-o-linear-gradient(98deg, rgba(0, 0, 0, 0) 44%, rgba(255, 255, 255, 0.17) 56%);
 		background:-ms-linear-gradient(98deg, rgba(0, 0, 0, 0) 44%, rgba(255, 255, 255, 0.17) 56%);
 		background:linear-gradient(-8deg, rgba(0, 0, 0, 0) 44%, rgba(255, 255, 255, 0.17) 56%);
-	}
+	}*/
 	
 	.menu-container {
 		
@@ -2411,6 +2420,7 @@ body {
 					#fe.color(#ffffff);
 					#fe.uppercase();
 					#fe.size(1.4em);
+					#fe.size(16px);
 					#fe.ff(pnsb);
 					
 					&:hover {
@@ -2569,6 +2579,66 @@ body {
 	}
 	
 }
+body {
+	
+	&[class*='theme-'], *[class*='theme-'] {
+		
+		&.theme-dev {
+			
+			@dbg-dline-w:2px;
+			@dbg-sline-w:1px;
+			@dbg-hover-sline-w:5px;
+			
+			outline: @dbg-dline-w dotted red;
+			#fe.bi('chess-bg.png');
+			
+			* {
+				outline:@dbg-dline-w dotted green;
+				
+				&:hover {
+					outline:@dbg-hover-sline-w solid black;
+				}
+				
+				& * {
+					outline:@dbg-dline-w dotted orange;
+					
+					& * {
+						outline:@dbg-dline-w dotted blue;
+						
+						& * {
+							outline:@dbg-sline-w solid red;
+							
+							& * {
+								outline:@dbg-sline-w solid green;
+								
+								& * {
+									outline:@dbg-sline-w solid orange;
+									
+									& * {
+										outline:@dbg-sline-w solid blue;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		&.theme-b0w {
+			#fe.color(#000000);
+			#fe.bg(#ffffff);
+			overflow-x:hidden;
+		}
+		&.theme-w0b {
+			#fe.color(#ffffff);
+			#fe.bg(#000000);
+		}
+		
+	}
+	
+}
+
 .b-vizavi-about {
 	margin-top:6.5em;
 	margin-bottom:6.5em;

@@ -7,13 +7,22 @@
 		
 		.header-row {
 			display:table-row;
+			display: flex;
+			align-items: center;
+    		justify-content: space-between;
 			
 			.header-cell {
 				display:table-cell;
 				vertical-align:middle;
 				padding:3em 0;
 				text-align:right;
-				
+				&.soc{
+					width: 30px;
+					padding: 3em 5px;
+				}
+				&.address{					
+					padding: 3em 15px 3em 0;
+				}
 				&.logo {
 					text-align:left;
 					
@@ -25,7 +34,9 @@
 						#site.bi('page/logo-header.png');
 						#fe.brep();
 						#fe.bpos(left center);
-						
+					    width: 160px;
+    					height: 65px;
+    					background-size: contain;
 						&:before {
 							content:none;
 						}
@@ -61,19 +72,25 @@
 					#fe.color(#333333);
 					#fe.size(1.6em);
 					#fe.ff(aspl);
-					#fe.lh(20px);
-					
+					#fe.lh(30px);
+					min-width: 30px;
+    				min-height: 30px;
 					&:before {
 						content:'';
 						position:absolute;
 						left:-30px;
 						top:0;
-						#fe.w(20px);
+						#fe.w(30px);
 						#fe.h(100%);
 						#fe.bpos();
 						#fe.brep();
+					}					
+					&.soc{
+						margin: 0;
+						&:before {
+							left: 0;
+						}
 					}
-					
 					&.phone:before {
 						#site.bi('page/header-phone-icon.png');
 					}
@@ -85,6 +102,19 @@
 					}
 					&.vk:before {
 						#site.bi('page/header-vk-icon.png');
+						background-size: contain;
+					}
+					&.fb:before {
+						#site.bi('page/header-fb-icon.png');
+						background-size: contain;
+					}
+					&.inst:before {
+						#site.bi('page/header-inst-icon.png');
+						background-size: contain;
+					}
+					&.yb:before {
+						#site.bi('page/header-yb-icon.png');
+						background-size: contain;
 					}
 					
 					&:hover {
@@ -128,8 +158,16 @@
 			}
 			
 		}
-		.contact {
-			
+		.soc-row{
+			margin: 10px -10px 0;
+		}
+		.contact {							
+			&.soc{
+				display: inline-block;
+				width: 32px;
+				height: 32px;
+				margin: 0 10px;
+			}
 			a {
 				display:inline-block;
 				cursor:pointer;
@@ -150,6 +188,16 @@
 					#fe.h(100%);
 					#fe.bpos();
 					#fe.brep();
+				}				
+				&.soc{
+					margin: 0;
+					width: 100%;
+					height: 100%;
+					&:before {
+						left: 0;
+						width: 100%;
+						height: 100%;
+					}
 				}
 				
 				&.phone:before {
@@ -163,6 +211,19 @@
 				}
 				&.vk:before {
 					#site.bi('page/header-vk-icon.png');
+					background-size: contain;
+				}
+				&.fb:before {
+					#site.bi('page/header-fb-icon.png');
+					background-size: contain;
+				}
+				&.inst:before {
+					#site.bi('page/header-inst-icon.png');
+					background-size: contain;
+				}
+				&.yb:before {
+					#site.bi('page/header-yb-icon.png');
+					background-size: contain;
 				}
 				
 				&:hover {
